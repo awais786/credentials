@@ -200,3 +200,7 @@ unit_tests_suite: build_test_image
 
 docs:
 	tox -e docs
+	
+install_transifex_client: ## Install the Transifex client
+	curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
+	git checkout -- LICENSE README.md
