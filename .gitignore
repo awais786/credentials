@@ -101,3 +101,6 @@ webpack-stats.json
 
 # PII annotation reports
 pii_report
+
+# transifex exe
+tx
