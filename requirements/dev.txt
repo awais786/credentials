@@ -7,7 +7,9 @@
 analytics-python==1.4.0
     # via -r requirements/test.txt
 appdirs==1.4.4
-    # via django-migration-linter
+    # via
+    #   -r requirements/test.txt
+    #   django-migration-linter
 asgiref==3.5.2
     # via
     #   -r requirements/test.txt
@@ -149,7 +151,7 @@ django-hijack==2.3.0
     #   -c requirements/constraints.txt
     #   -r requirements/test.txt
 django-migration-linter==4.1.0
-    # via -r requirements/dev.in
+    # via -r requirements/test.txt
 django-ratelimit==3.0.1
     # via -r requirements/test.txt
 django-rest-swagger==2.2.0
@@ -229,7 +231,7 @@ faker==13.12.0
     # via
     #   -r requirements/test.txt
     #   factory-boy
-filelock==3.7.0
+filelock==3.7.1
     # via
     #   -r requirements/test.txt
     #   tox

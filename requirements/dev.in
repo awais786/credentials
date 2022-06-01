@@ -20,6 +20,3 @@ pywatchman; "linux" in sys_platform
 
 # For local debugging
 django-debug-toolbar
-
-# For migrations linting
-django-migration-linter

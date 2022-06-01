@@ -6,6 +6,10 @@
 #
 analytics-python==1.4.0
     # via -r requirements/base.txt
+appdirs==1.4.4
+    # via
+    #   -r requirements/base.txt
+    #   django-migration-linter
 asgiref==3.5.2
     # via
     #   -r requirements/base.txt
@@ -95,6 +99,7 @@ distlib==0.3.4
     #   django-extensions
     #   django-filter
     #   django-hijack
+    #   django-migration-linter
     #   django-statici18n
     #   django-storages
     #   djangorestframework
@@ -128,6 +133,8 @@ django-hijack==2.3.0
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
+django-migration-linter==4.1.0
+    # via -r requirements/base.txt
 django-ratelimit==3.0.1
     # via -r requirements/base.txt
 django-rest-swagger==2.2.0
@@ -196,7 +203,7 @@ factory-boy==3.2.1
     # via -r requirements/test.in
 faker==13.12.0
     # via factory-boy
-filelock==3.7.0
+filelock==3.7.1
     # via
     #   tox
     #   virtualenv
@@ -476,7 +483,10 @@ text-unidecode==1.3
     #   -r requirements/base.txt
     #   python-slugify
 toml==0.10.2
-    # via tox
+    # via
+    #   -r requirements/base.txt
+    #   django-migration-linter
+    #   tox
 tomli==2.0.1
     # via
     #   black
