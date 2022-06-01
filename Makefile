@@ -200,3 +200,6 @@ unit_tests_suite: build_test_image
 
 docs:
 	tox -e docs
+
+lint_migrations:
+	python manage.py lintmigrations
