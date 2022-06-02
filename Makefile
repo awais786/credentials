@@ -202,4 +202,4 @@ docs:
 	tox -e docs
 
 lint_migrations:
-	python manage.py lintmigrations
+	python manage.py lintmigrations --git-commit-id `git rev-parse origin/master` --project-root-path '.'
