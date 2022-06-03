@@ -45,7 +45,6 @@ pytz
 requests
 social-auth-app-django
 xss-utils
-django-migration-linter
 
 # TODO Install in configuration
 git+https://github.com/edx/credentials-themes.git@0.1.114#egg=edx_credentials_themes==0.1.114

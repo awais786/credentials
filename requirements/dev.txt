@@ -77,7 +77,7 @@ coreschema==0.0.4
     # via
     #   -r requirements/test.txt
     #   coreapi
-coverage==6.4
+coverage==6.4.1
     # via -r requirements/test.txt
 cryptography==37.0.2
     # via
@@ -385,7 +385,7 @@ pyjwt[crypto]==2.4.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==2.13.9
+pylint==2.14.0
     # via
     #   -r requirements/test.txt
     #   edx-lint
@@ -567,6 +567,10 @@ tomli==2.0.1
     #   black
     #   pylint
     #   pytest
+tomlkit==0.11.0
+    # via
+    #   -r requirements/test.txt
+    #   pylint
 tox==3.25.0
     # via -r requirements/test.txt
 transifex-client==0.14.4
