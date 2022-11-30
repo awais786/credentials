@@ -16,7 +16,7 @@ on:
   check_suite:
     types:
       - completed
-  status: {"Migrations check on mysql8", "Lint Commit Messages"}
+  status: {"Migrations check on mysql8": "success", "Lint Commit Messages": "success"}
 jobs:
   automerge:
     runs-on: ubuntu-latest
