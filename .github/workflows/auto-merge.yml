@@ -26,4 +26,6 @@ jobs:
         uses: "pascalgn/automerge-action@v0.15.5"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          MERGE_LABELS: "requirements upgrades: automerge"
+          MERGE_LABELS: "Ready to review"
+          MERGE_METHOD: "merge"
+          
