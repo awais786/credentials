@@ -498,7 +498,7 @@ types-cryptography==3.3.23.1
     # via
     #   -r requirements/base.txt
     #   pyjwt
-typing-extensions==4.3.0
+typing-extensions==4.4.0
     # via
     #   astroid
     #   black
