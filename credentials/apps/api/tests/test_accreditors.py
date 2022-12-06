@@ -27,7 +27,7 @@ class AccreditorTests(TestCase):
         self.program_cert = ProgramCertificateFactory()
 
     def test_create_credential_type_issuer_map(self):
-        """Verify the Accreditor supports only one issuer per credential type."""
+        """Verify the Accreditor supports only one issuer per credential type and ."""
         accreditor = Accreditor(issuers=[ProgramCertificateIssuer(), ProgramCertificateIssuer()])
 
         expected = {self.program_credential: accreditor.issuers[0]}
