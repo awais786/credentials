@@ -1,0 +1,37 @@
+name: Merge Pull Request
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  merge_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Merge Pull Request
+        uses: python
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          import github
+          import os
+
+          # Get the repository and pull request objects
+          repo_owner = os.environ["GITHUB_REPOSITORY_OWNER"]
+          repo_name = os.environ["GITHUB_REPOSITORY_NAME"]
+          pull_request_number = os.environ["GITHUB_PULL_REQUEST"]
+
+          g = github.Github(os.environ["GITHUB_TOKEN"])
+          repo = g.get_repo(f"{repo_owner}/{repo_name}")
+          pr = repo.get_pull(pull_request_number)
+
+          # Check the status of the pull request
+          if pr.is_merged():
+              print("Pull request has already been merged")
+          elif pr.is_closed():
+              print("Pull request is closed")
+          else:
+              # Merge the pull request
+              pr.merge()
+              print("Pull request merged successfully")
