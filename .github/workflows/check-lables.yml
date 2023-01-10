@@ -26,4 +26,4 @@ jobs:
       - name: run command
         run: |
           cd tubular
-          check_pr_tests_status.py token ${{ github.token }} --org openedx --repo credentials --pr_number 1893
+          check_pr_tests_status.py --token ${{ github.token }} --org openedx --repo credentials --pr_number 1893
