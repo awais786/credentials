@@ -1,5 +1,7 @@
 name: check-tests-statuses
-
+on:
+  - pull_request
+  -
 jobs:
   upgrade_requirements:
     runs-on: ubuntu-20.04
