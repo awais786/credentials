@@ -23,5 +23,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.requirements_bot_github_token }}
         run: |
-          cd $GITHUB_WORKSPACE/testeng-ci
+          cd $GITHUB_WORKSPACE/tubular
           check_pr_tests_status.py --org openedx --repo credentials 1893
