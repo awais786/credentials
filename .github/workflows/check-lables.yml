@@ -1,4 +1,4 @@
-name: Upgrade Requirements
+name: check-tests-statuses
 
 jobs:
   upgrade_requirements:
