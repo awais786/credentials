@@ -1,0 +1,29 @@
+name: check-tests-statuses
+on:
+  - pull_request
+  -
+jobs:
+  upgrade_requirements:
+    runs-on: ubuntu-20.04
+
+    strategy:
+      matrix:
+        python-version: ["3.8"]
+
+    steps:
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: setup tubular
+        run: |
+          git clone https://github.com/openedx/tubular.git
+          cd tubular
+          pip install -e .
+          
+      - name: run command
+        run: |
+          cd tubular
+          check_pr_tests_status.py --token ${{ github.token }} --org openedx --repo credentials --pr_number 1893
