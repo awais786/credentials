@@ -19,9 +19,6 @@ jobs:
           pip install -r requirements/base.txt
           
       - name: run command
-        id: runcommand
-        env:
-          GITHUB_TOKEN: ${{ secrets.requirements_bot_github_token }}
         run: |
           cd tubular
           check_pr_tests_status.py --org openedx --repo credentials 1893
