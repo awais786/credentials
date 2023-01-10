@@ -21,7 +21,7 @@ jobs:
         run: |
           git clone https://github.com/openedx/tubular.git
           cd tubular
-          pip install -r requirements/base.txt
+          pip install -e .
           
       - name: run command
         run: |
