@@ -19,7 +19,7 @@ attrs==22.1.0
     #   -r requirements/base.txt
     #   edx-ace
     #   pytest
-backoff==1.10.0
+backoff==2.10.0
     # via
     #   -r requirements/base.txt
     #   analytics-python
