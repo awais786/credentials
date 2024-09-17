@@ -75,7 +75,7 @@ class TestPipelineUserRoles(TestCase):
 
     def assert_has_admin_role(self, has_role=True):
         """
-        Shorthand convenience.
+        Shorthand conveniences.
         """
         _assert = self.assertTrue if has_role else self.assertFalse
         _assert(self.user.groups.filter(name=Role.ADMINS).exists())
